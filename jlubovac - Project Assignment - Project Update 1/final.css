@@ -1,14 +1,16 @@
 body {
-
-    background-color: #EAEAEA;
+    margin: 0;
     color: #555555;
     font-family: Arial, Helvetica, sans-serif;
-
+    background: linear-gradient( #0d0d0e, #727475, #0d0d0e);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    min-height: 100vh;
 }
 
 header {
 
-    background-color: #002171;
+    background-color: #222325;
     color: #FFFFFF;
     text-align: center;
 
@@ -25,11 +27,11 @@ header a:link {
 }
 
 header a:visited {
-    color: #FFFFFF;
+    color: #8dc0d8;
 }
 
 header a:hover {
-    color: #90C7E3;
+    color: #B0E0E6;
 }
 
 h1 {
@@ -45,15 +47,15 @@ h1 {
 
 h2 {
 
-    color: #1976D2;
+    color: #B00B13;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px #CCCCCC;
+    text-shadow: 1px 1px #cfcfcf;
 
 }
 
 h3 {
 
-    color: #000033;
+    color: #8dc0d8;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -88,24 +90,128 @@ nav a {
 }
 
 nav a:link {
-    color: #5C7FA3;
+    color: #ffffff;
 }
 
 nav a:visited {
-    color: #344873;
+    color: #8dc0d8;
 }
 
 nav a:hover {
-    color: #A52A2A;
+    color: #B0E0E6;
 }
 
 main {
+    background: transparent;
+    margin: 1.5rem auto 2rem;
+    max-width: 1100px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(5px);
+}
 
-    background-color: #FFFFFF;
-    padding: 20px;
-    display: block;
-    overflow: auto;
+.floating-main {
+    display: grid;
+    gap: 1rem;
+}
 
+.card-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    position: relative;
+    top: -12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0,0,0,0.22);
+}
+
+.card.full-width {
+    grid-column: 1 / -1;
+}
+
+.playlist-container {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-top: 0.75rem;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 0.5rem;
+}
+
+.playlist-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: decimal inside;
+}
+
+.playlist-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.playlist-list li:last-child {
+    border-bottom: none;
+}
+
+.feedback-form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.feedback-form label {
+    font-weight: bold;
+}
+
+.card.full-width h2 {
+    text-align: center;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.feedback-form button {
+    justify-self: start;
+    background-color: #8dc0d8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #B0E0E6;
+}
+
+@media (min-width: 900px) {
+    .card-row {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 main ul {
@@ -128,7 +234,8 @@ dt {
 
 footer {
 
-    background-color: #FFFFFF;
+    background-color: #696a6d;
+    color: #b4b5b9;
     font-size: 75%;
     font-style: italic;
     text-align: center;
@@ -211,28 +318,23 @@ th {
 }
 
 #wrapper {
-
     margin: auto;
-    background-color: #90C7E3;
-    border: 1px solid #000033;
-    background-image: linear-gradient(to bottom, #FFFFFF, #09C7E3);
-    background-repeat: no-repeat;
-    /* min-width: 960px;
-    max-width: 2048px; */
-    box-shadow: 3px 3px 3px #333333;
-
+    max-width: 1200px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
 }
 
 #homehero {
 
     height: 300px;
-    background-image: url("coast2.jpg");
+    background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
 }
 
-#yurthero {
+#abouthero {
 
     height: 300px;
     background-image: url("yurt.jpg");
@@ -241,7 +343,25 @@ th {
 
 }
 
-#trailhero {
+#projecthero {
+
+    height: 300px;
+    background-image: url("trail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#arthero {
+
+    height: 300px;
+    background-image: url("trail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#extrahero {
 
     height: 300px;
     background-image: url("trail.jpg");
@@ -258,6 +378,7 @@ th {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        padding-top: 0.5em;
 
     }
 
@@ -315,9 +436,18 @@ th {
 
         nav ul {
 
-            flex-direction: column;
-            padding-top: 1em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            gap: 1rem;
+            padding-top: 0.5em;
 
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
         }
 
         header {
@@ -352,13 +482,13 @@ th {
 
         #wrapper {
 
-            width: 80%;
+            width: 95%;
             display: grid;
             grid-template-areas:
                 "header header"
-                "nav    hero"
-                "nav    main"
-                "nav   footer";
+                "nav    nav"
+                "main    main"
+                "footer   footer";
 
         }
 
