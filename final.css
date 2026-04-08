@@ -2,15 +2,14 @@ body {
     margin: 0;
     color: #555555;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient( #0d0d0e, #727475, #0d0d0e);
-    background-attachment: fixed;
-    background-size: 400% 400%;
+    background: linear-gradient( #0c0c0c, #B0E0E6);
+    background-size: 500% 400%;
     min-height: 100vh;
 }
 
 header {
 
-    background-color: #222325;
+    background-color: #000000;
     color: #FFFFFF;
     text-align: center;
 
@@ -40,31 +39,52 @@ h1 {
     margin-bottom: 0;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     letter-spacing: 0.25em;
 
 }
 
 h2 {
 
-    color: #B00B13;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px #cfcfcf;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 
 }
 
 h3 {
 
-    color: #8dc0d8;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Proxima Nova', sans-serif, Consolas, 'Courier New', monospace;
+
+}
+
+h3 a {
+
+    text-decoration: none;
+    
+    font-weight: bold;
+    color: #FFFFFF;
+    
+}
+
+h3 a:hover {
+
+    color: #1DB954;
+    background-color: #1f1f1f;
 
 }
 
 nav {
 
+    background: transparent;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(3px);
     font-weight: bold;
-    padding: 0em;
-    font-size: 120%;
+    padding: 0.25em;
+    font-size: 115%;
     text-align: center;
 
 }
@@ -81,7 +101,7 @@ nav ul {
 
 nav li {
 
-    border-bottom: 1px solid darkblue;
+    border-bottom: 1px solid #121212;
 
 }
 
@@ -105,15 +125,32 @@ main {
     background: transparent;
     margin: 1.5rem auto 2rem;
     max-width: 1100px;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 .floating-main {
     display: grid;
     gap: 1rem;
+}
+
+.card {
+    background: #000000;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    position: relative;
+    top: -12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card li a {
+
+    text-decoration: none;
+    color: #FFFFFF;
+
 }
 
 .card-row {
@@ -122,20 +159,19 @@ main {
     gap: 1rem;
 }
 
-.card {
-    background: rgba(255,255,255,0.95);
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    position: relative;
-    top: -12px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.playlist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px rgba(0,0,0,0.22);
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 28px rgba(0,0,0,0.22);
+.playlist-card .playlist-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.playlist-card .playlist-link:hover {
+    color: inherit;
 }
 
 .card.full-width {
@@ -146,9 +182,9 @@ main {
     max-height: 220px;
     overflow-y: auto;
     margin-top: 0.75rem;
-    border: 1px solid #d5d5d5;
+    border: 1px solid #121212;
     border-radius: 8px;
-    background: #ffffff;
+    background: #121212;
     padding: 0.5rem;
 }
 
@@ -158,13 +194,33 @@ main {
     list-style: decimal inside;
 }
 
+.playlist-list li::marker {
+    
+    color: #b3b3b3;
+    font-family: 'Proxima Nova', Consolas, 'Courier New', monospace;
+    font-weight: bold;
+
+}
+
 .playlist-list li {
     padding: 0.35rem 0;
-    border-bottom: 1px solid #efefef;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid #121212;
 }
 
 .playlist-list li:last-child {
     border-bottom: none;
+}
+
+.playlist-list li a:hover {
+    background: #1f1f1f;
+    color: #1DB954;
+}
+
+.playlist-list li:hover::marker {
+    color: #FFFF;
 }
 
 .feedback-form {
@@ -185,9 +241,11 @@ main {
 
 .feedback-form input,
 .feedback-form textarea {
+    background-color: #121212;
+    color: #FFFFFF;
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #121212;
     border-radius: 6px;
     font: inherit;
 }
@@ -214,9 +272,13 @@ main {
     }
 }
 
+label {
+    color: #FFFFFF;
+}
+
 main ul {
 
-    list-style-image: url('marker.gif');
+    list-style-image: url('');
 
 }
 
@@ -228,14 +290,14 @@ table {
 
 dt {
 
-    color: #002171;
+    color: #121212;
 
 }
 
 footer {
 
-    background-color: #696a6d;
-    color: #b4b5b9;
+    background-color: #000000;
+    color: #FFFFFF;
     font-size: 75%;
     font-style: italic;
     text-align: center;
@@ -337,7 +399,7 @@ th {
 #abouthero {
 
     height: 300px;
-    background-image: url("yurt.jpg");
+    background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -346,7 +408,7 @@ th {
 #projecthero {
 
     height: 300px;
-    background-image: url("trail.jpg");
+    background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -355,7 +417,7 @@ th {
 #arthero {
 
     height: 300px;
-    background-image: url("trail.jpg");
+    background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -364,10 +426,17 @@ th {
 #extrahero {
 
     height: 300px;
-    background-image: url("trail.jpg");
+    background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
+}
+
+
+@media (max-width: 599px) {
+    nav li:hover {
+        background: #1f1f1f;
+    }
 }
 
 @media (min-width: 600px) {
@@ -379,6 +448,13 @@ th {
         flex-wrap: nowrap;
         justify-content: space-evenly;
         padding-top: 0.5em;
+        
+
+    }
+
+    nav a {
+
+        text-decoration: none;
 
     }
 
@@ -449,6 +525,8 @@ th {
             flex: 1;
             text-align: center;
         }
+
+        
 
         header {
 
