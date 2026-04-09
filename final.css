@@ -105,6 +105,12 @@ nav li {
 
 }
 
+nav li::marker {
+
+    content: "";
+
+}
+
 nav a {
     text-decoration: none;
 }
@@ -137,6 +143,7 @@ main {
 }
 
 .card {
+
     background: #000000;
     border-radius: 12px;
     padding: 0.75rem;
@@ -144,6 +151,16 @@ main {
     position: relative;
     top: -12px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.card-desc {
+
+    color: #757575;
+    font-size: 95%;
+    font-weight: bold;
+    margin-top: 0.5rem;
+
 }
 
 .card li a {
@@ -154,31 +171,42 @@ main {
 }
 
 .card-row {
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+
 }
 
 .playlist-card:hover {
+
     transform: translateY(-4px);
     box-shadow: 0 16px 28px rgba(0,0,0,0.22);
+
 }
 
 .playlist-card .playlist-link {
+
     display: block;
     color: inherit;
     text-decoration: none;
+
 }
 
 .playlist-card .playlist-link:hover {
+
     color: inherit;
+
 }
 
 .card.full-width {
+
     grid-column: 1 / -1;
+
 }
 
 .playlist-container {
+
     max-height: 220px;
     overflow-y: auto;
     margin-top: 0.75rem;
@@ -186,32 +214,46 @@ main {
     border-radius: 8px;
     background: #121212;
     padding: 0.5rem;
+
 }
 
 .playlist-list {
+
     margin: 0;
     padding-left: 1.2rem;
-    list-style: decimal inside;
-}
-
-.playlist-list li::marker {
-    
-    color: #b3b3b3;
-    font-family: 'Proxima Nova', Consolas, 'Courier New', monospace;
-    font-weight: bold;
 
 }
 
 .playlist-list li {
+
     padding: 0.35rem 0;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     border-bottom: 1px solid #121212;
+    border-radius: 4px;
+
+}
+
+.playlist-list li a {
+
+    font-size: 95%
+
+}
+
+.playlist-list li::marker {
+    
+    color: #757575;
+    font-family: 'Proxima Nova', Consolas, 'Courier New', monospace;
+
 }
 
 .playlist-list li:last-child {
     border-bottom: none;
+}
+
+.playlist-list li:hover {
+    background: #1f1f1f;
 }
 
 .playlist-list li a:hover {
@@ -220,7 +262,14 @@ main {
 }
 
 .playlist-list li:hover::marker {
-    color: #FFFF;
+    color: #FFFFFF;
+}
+
+.playlist-list-artist {
+
+    color: #757575;
+    font-size: 70%;
+
 }
 
 .feedback-form {
@@ -264,6 +313,12 @@ main {
 
 .feedback-form button:hover {
     background-color: #B0E0E6;
+}
+
+li::marker {
+
+    content: counter(list-item) " ";
+    font-weight: 100;
 }
 
 @media (min-width: 900px) {
@@ -389,7 +444,7 @@ th {
 
 #homehero {
 
-    height: 300px;
+    margin: auto;
     background-image: url("");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -466,8 +521,8 @@ th {
 
     section {
 
-        margin-left: 2em;
-        margin-right: 2em;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
         flex: 1;
 
     }
