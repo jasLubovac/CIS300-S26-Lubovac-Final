@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>My Portfolio</title>
+    <title>Jasmina Lubovac</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="final.css">
@@ -31,31 +31,47 @@
         <main class="floating-main">
             <div class="card-row">
                 <section class="card">
-                    <h2>What's New!</h2>
-                    <p>Latest updates, achievements, highlights.</p>
+                    <h2>what's New!</h2>
+                    <img class="whats-new-media" src="supernatural_s1.jpg" alt="A Photo of season 1 of the TV show 'Supernatural'">
+                    <div class="whats-new-text">
+                        <p class="whats-new-desc">I'm currently watching Supernatural season 1!'</p>
+                        <p class="whats-new-desc">This is the first time I have seen this show. It reminds me a lot of what I like about 'The Walking Dead.'</p>
+                        <p class="whats-new-quote">"Dad's on a hunting trip, and he hasn't been home in a few days."</p>
+                    </div>
                 </section>
 
                 <section class="card playlist-card">
+                        <!-- spotify embed -->
+                        <!-- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Ec8XsxXXDxNkbLZieSiPi?utm_source=generator&theme=0" 
+                        width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
 
-                    <!-- spotify embed -->
-                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Ec8XsxXXDxNkbLZieSiPi?utm_source=generator&theme=0" 
-                    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-                    <h3><a href="https://open.spotify.com/playlist/3Ec8XsxXXDxNkbLZieSiPi?si=6e569ffc0877444e" target="_blank">currently obsessed with these (march '26)</a></h3>
-                    <p class="card-desc">Strange variety this month.</p>
-                    <div class="playlist-container">
-                        <ul class="playlist-list">
-                            <li><a href="https://open.spotify.com/track/7CI0VS6ETno5mgHi4PoCrY?si=eb9b709865e64bae" target="_blank">Don't Follow</a>
-                                <p class="playlist-list-artist">Alice in Chains</p></li>
-                            <li><a href="https://open.spotify.com/track/5VsBTV8gxbMCRTomd2nRqg?si=f05ec49b352843c1" target="_blank">In a Lake - Mitski</a></li>
-                            <li><a href="https://open.spotify.com/track/7CA0mEKqEZ0WFAIlTS4uEl?si=b63a0a566db94677" target="_blank">SWEET ★ HONEY ★ BUCKIIN’ - Beyoncé and Shaboozey</a></li>
-                        </ul>
-                    </div>
+                        <div class="playlist-background">
+                            <h3 class="playlist-header">
+                                <img class="playlist-album" src="JarOfFlies_AliceInChains.jpg" alt="Album cover of Jar Of Flies by Alice in Chains">
+                                <div class="playlist-text">
+                                    <a href="https://open.spotify.com/playlist/3Ec8XsxXXDxNkbLZieSiPi?si=6e569ffc0877444e" target="_blank">
+                                        currently obsessed with these (march '26)
+                                    </a>
+                                    <p class="card-desc">My favourite so far has been "Don't Follow"</p>
+                                </div>
+                            </h3>
+                        </div>
+                        
+                        <div class="playlist-container">
+                            <ul class="playlist-list">
+                                <li><a href="https://open.spotify.com/track/7CI0VS6ETno5mgHi4PoCrY?si=eb9b709865e64bae" target="_blank">Don't Follow</a>
+                                    <p class="playlist-list-artist">Alice in Chains</p></li>
+                                <li><a href="https://open.spotify.com/track/5VsBTV8gxbMCRTomd2nRqg?si=f05ec49b352843c1" target="_blank">In a Lake</a>
+                                    <p class="playlist-list-artist">Mitski</p></li>
+                                <li><a href="https://open.spotify.com/track/7CA0mEKqEZ0WFAIlTS4uEl?si=b63a0a566db94677" target="_blank">SWEET ★ HONEY ★ BUCKIIN’</a>
+                                    <p class="playlist-list-artist">Beyoncé, Shaboozey</p></li>
+                            </ul>
+                        </div>
                 </section>
             </div>
 
             <section class="card full-width">
-                <h2>Leave a Comment</h2>
+                <h2>leave a comment</h2>
                 <form class="feedback-form" action="#" method="post">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -75,7 +91,7 @@
     <footer>
         Copyright &copy;
         2026 Jasmina Lubovac <br>
-        <a href="malito:jas.lubovo@gmail.com">jas.lubovo@gmail.com</a>
+        <a class="footer-link" href="mailto:jas.lubovo@gmail.com" target="_blank">jas.lubovo@gmail.com</a>
     </footer>
 </body>
 

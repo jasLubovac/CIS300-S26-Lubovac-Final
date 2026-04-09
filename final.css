@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    color: #555555;
+    color: #757575;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient( #0c0c0c, #B0E0E6);
     background-size: 500% 400%;
@@ -18,6 +18,7 @@ header {
 header a {
 
     text-decoration: none;
+    transition: transform 0.15s ease, color 0.05s ease-in;
 
 }
 
@@ -31,6 +32,8 @@ header a:visited {
 
 header a:hover {
     color: #B0E0E6;
+    display: inline-block;
+    transform: translateY(1px);
 }
 
 h1 {
@@ -39,7 +42,7 @@ h1 {
     margin-bottom: 0;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  Poppins, sans-serif;
     font-weight: bold;
     letter-spacing: 0.25em;
 
@@ -48,8 +51,9 @@ h1 {
 h2 {
 
     color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  Poppins, sans-serif;
     font-weight: bold;
+    margin: 0.25em;
 
 }
 
@@ -57,23 +61,26 @@ h3 {
 
     color: #FFFFFF;
     font-weight: bold;
-    font-family: 'Proxima Nova', sans-serif, Consolas, 'Courier New', monospace;
+    font-family:  Poppins, sans-serif;
+    margin-bottom: 0;
 
 }
 
 h3 a {
 
     text-decoration: none;
-    
+    font-size: 85%;
     font-weight: bold;
     color: #FFFFFF;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.15s ease, color 0.05s ease-in;
     
 }
 
 h3 a:hover {
 
     color: #1DB954;
-    background-color: #1f1f1f;
+    transform: translateY(1px);
 
 }
 
@@ -111,20 +118,24 @@ nav li::marker {
 
 }
 
-nav a {
+nav li a {
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.15s ease, color 0.05s ease;
 }
 
-nav a:link {
+nav li a:link {
     color: #ffffff;
 }
 
-nav a:visited {
+nav li a:visited {
     color: #8dc0d8;
 }
 
-nav a:hover {
+nav li a:hover {
+
     color: #B0E0E6;
+    transform: translateY(-2px);
 }
 
 main {
@@ -156,10 +167,14 @@ main {
 
 .card-desc {
 
+    background-color: #1f1f1f;
     color: #757575;
-    font-size: 95%;
-    font-weight: bold;
-    margin-top: 0.5rem;
+    font-size: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin: 0;
+    text-align: center;
+    padding-top: 0.5em;
 
 }
 
@@ -178,9 +193,78 @@ main {
 
 }
 
+.whats-new-media {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.whats-new-text {
+
+    background-color: #121212;
+    padding: 0.25em;
+    border-radius: 0 0 8px 8px;
+    padding-top: 0.5em;
+
+}
+
+.whats-new-desc {
+
+    color: #ffffff;
+    margin: 0.5em;
+
+}
+
+.whats-new-quote {
+
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 0.5em;
+    margin: 0.5em;
+
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    margin-top: 0;
+    padding: 1em;
+}
+
+.playlist-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.playlist-background {
+
+    background-color: #1f1f1f;
+    border-radius: 12px 12px 0 0;
+
+}
+
+.playlist-album {
+
+    width: clamp(80px, 16vw, 120px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
 .playlist-card:hover {
 
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 16px 28px rgba(0,0,0,0.22);
 
 }
@@ -207,20 +291,21 @@ main {
 
 .playlist-container {
 
-    max-height: 220px;
+    max-height: 300px;
     overflow-y: auto;
-    margin-top: 0.75rem;
     border: 1px solid #121212;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     background: #121212;
     padding: 0.5rem;
+    scrollbar-color: #1f1f1f #121212;
 
 }
 
 .playlist-list {
 
     margin: 0;
-    padding-left: 1.2rem;
+    padding-left: 2em;
+    padding-bottom: 0.5em;
 
 }
 
@@ -228,7 +313,7 @@ main {
 
     padding: 0.35rem 0;
     color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
+    font-family:  "Proxima Nova", sans-serif, Consolas, 'Courier New', monospace;
     font-weight: bold;
     border-bottom: 1px solid #121212;
     border-radius: 4px;
@@ -243,8 +328,9 @@ main {
 
 .playlist-list li::marker {
     
+    padding-left: 0.5em;
     color: #757575;
-    font-family: 'Proxima Nova', Consolas, 'Courier New', monospace;
+    font-family:  "Proxima Nova", sans-serif, Consolas, 'Courier New', monospace;
 
 }
 
@@ -254,6 +340,7 @@ main {
 
 .playlist-list li:hover {
     background: #1f1f1f;
+    background-size: 100% 100%;
 }
 
 .playlist-list li a:hover {
@@ -262,6 +349,8 @@ main {
 }
 
 .playlist-list li:hover::marker {
+    
+    background-color: #1f1f1f;
     color: #FFFFFF;
 }
 
@@ -290,11 +379,11 @@ main {
 
 .feedback-form input,
 .feedback-form textarea {
-    background-color: #121212;
+    background-color: #1f1f1f;
     color: #FFFFFF;
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #121212;
+    border: 2px solid #1f1f1f;
     border-radius: 6px;
     font: inherit;
 }
@@ -313,6 +402,19 @@ main {
 
 .feedback-form button:hover {
     background-color: #B0E0E6;
+}
+
+.footer-link {
+
+    color: #8dc0d8;
+    transition: color 0.1s ease;
+
+}
+
+.footer-link:hover {
+
+    color: #B0E0E6;
+
 }
 
 li::marker {
@@ -356,7 +458,6 @@ footer {
     font-size: 75%;
     font-style: italic;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 2em;
 
 }
@@ -487,8 +588,15 @@ th {
 
 }
 
+::selection {
 
-@media (max-width: 599px) {
+    background-color: #B00B13;
+    color: #FFFFFF;
+
+}
+
+
+@media (min-max-width: 599px) {
     nav li:hover {
         background: #1f1f1f;
     }
@@ -520,9 +628,7 @@ th {
     }
 
     section {
-
-        margin-left: 0.1em;
-        margin-right: 0.1em;
+        
         flex: 1;
 
     }
